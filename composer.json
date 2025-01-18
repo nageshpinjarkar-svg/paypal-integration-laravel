@@ -1,0 +1,32 @@
+{
+    "name": "proxylyx/paypal",
+    "type": "library",
+    "description": "Laravel plugin For Processing Payments Through Paypal Express Checkout. Can Be Used Independently With Other Applications.",
+    "keywords": ["http", "rest", "web service", "paypal", "laravel paypal"],
+    "license": "MIT",
+    "autoload":{
+        "psr-4": {
+            "Proxylyx\\PayPal\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "illuminate/support": "^6.9|^7.0|^8.0|^9.0|^10.0",
+        "nesbot/carbon": "^2.66"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra" : {
+        "laravel" : {
+            "providers" : [
+                "Proxylyx\\PayPal\\Providers\\PayPalServiceProvider"
+            ],
+            "aliases" : {
+                "PayPal" : "Proxylyx\\PayPal\\Facades\\PayPal"
+            }
+        }
+    }
+}
